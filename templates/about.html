@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+  .about-hero {
+    background-image: url('https://assets.euromoneydigital.com/dims4/default/1fd1f3e/2147483647/strip/true/crop/2000x1236+0+0/resize/840x519!/quality/90/?url=http%3A%2F%2Feuromoney-brightspot.s3.amazonaws.com%2Fe0%2Ff3%2F1a7b421b4e5589e063cda5edef66%2Fdata-innovation-comp.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .about-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 900px;
+    line-height: 1.6;
+  }
+
+  .about-content h1,
+  .about-content h2 {
+    color: #ffd700;
+  }
+
+  .about-content ul {
+    margin-left: 1.5rem;
+  }
+
+  .back-link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+</style>
+
+<div class="about-hero">
+  <div class="about-content">
+    <h1>About CitizenAI</h1>
+    <a class="back-link" href="/">← Back to Home</a>
+
+    <p><strong>CitizenAI</strong> is a platform designed to improve how governments and citizens interact, using artificial intelligence (AI) to make public services smarter, faster, and more accessible.</p>
+
+    <p>Our mission is to simplify civic interactions, encourage transparency, and foster trust by providing a smart, responsive, and accessible interface for every citizen.</p>
+
+    <h2>🚀 In Simple Terms:</h2>
+    <ul>
+      <li>Ask questions about public services</li>
+      <li>Report issues like potholes or pollution</li>
+    </ul>
+
+    <h2>🧠 Key Features:</h2>
+    <ul>
+      <li>AI Chat Assistant</li>
+      <li>Sentiment Analysis</li>
+      <li>Civic Concern Reporting</li>
+      <li>Powered by IBM Granite Model</li>
+    </ul>
+
+    <h2>🏛️ Why It's Useful:</h2>
+    <ul>
+      <li>Improves access to services</li>
+      <li>Automates repetitive tasks</li>
+      <li>Builds trust through transparency</li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}

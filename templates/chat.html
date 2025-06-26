@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Ask the Assistant</h2>
+
+<form method="POST">
+  <label><strong>Ask a Question:</strong></label><br>
+  <input type="text" name="question" style="width: 80%; padding: 10px;" required>
+  <br><br>
+  <button type="submit" style="background-color: green; color: white; padding: 8px 16px;">Submit</button>
+</form>
+
+{% if latest %}
+  <h3>Response:</h3>
+  <div style="background-color: #eef3f7; padding: 15px; border-radius: 10px;">
+    <ul>
+      {% for line in latest.response.split('\n') %}
+        {% if line.strip() %}
+          <li>{{ line.strip() }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+
+
+{% if show_feedback %}
+  <br><br>
+  <h2>Feedback Sentiment</h2>
+  <form method="POST">
+    <label><strong>Enter Feedback for Sentiment:</strong></label><br>
+    <textarea name="feedback" rows="4" style="width: 80%;" required></textarea>
+    <br><br>
+    <button type="submit" style="background-color: green; color: white; padding: 8px 16px;">Submit</button>
+  </form>
+
+  {% if sentiment %}
+    <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+  {% endif %}
+{% endif %}
+
+{% endblock %}

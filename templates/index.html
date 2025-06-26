@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+  .hero {
+    background-image: url('https://assets.euromoneydigital.com/dims4/default/1fd1f3e/2147483647/strip/true/crop/2000x1236+0+0/resize/840x519!/quality/90/?url=http%3A%2F%2Feuromoney-brightspot.s3.amazonaws.com%2Fe0%2Ff3%2F1a7b421b4e5589e063cda5edef66%2Fdata-innovation-comp.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .overlay button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .overlay button:hover {
+    background-color: #2c3e90;
+  }
+</style>
+
+<div class="hero">
+  <div class="overlay">
+    <h1>Empowering Citizens Through AI</h1>
+    <p>CitizenAI is your intelligent assistant for civic engagement. From accessing services to sharing feedback, our AI-powered platform helps citizens and governments communicate better—anytime, anywhere.</p>
+    <a href="{{ url_for('login') }}"><button>Get Started</button></a>
+    <p style="margin-top: 1rem;">Join us in building a smarter, more responsive civic environment.</p>
+  </div>
+</div>
+
+{% endblock %}

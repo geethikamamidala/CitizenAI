@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header><h1>Login</h1><nav>
+    <a href="/">Home</a> | <a href="/about">About</a> |
+    <a href="/chat">Chat</a> | <a href="/dashboard">Dashboard</a> | 
+    <a href="/login">Login</a> | <a href="/logout">Logout</a>
+  </nav></header>
+  <main>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="card">
+      <form method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br><br>
+    
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+    
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    {% endblock %}
+    
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f9; }
+header { background: #004080; color: white; padding: 1rem; text-align: center; }
+nav a { margin: 0 1rem; color: white; text-decoration: none; }
+main { padding: 2rem; }
+form { margin-bottom: 1.5rem; }
+textarea, input[type="text"], input[type="password"] { width: 100%; padding: 0.5rem; margin-top: 0.5rem; }
+button { padding: 0.5rem 1rem; background: #004080; color: white; border: none; }
+.response { background: #e0f7fa; padding: 1rem; border-radius: 5px; margin-top: 1rem; }

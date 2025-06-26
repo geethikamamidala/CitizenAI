@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header><h1>Insights Dashboard</h1><nav>
+    <a href="/">Home</a> | <a href="/about">About</a>  |
+    <a href="/chat">Chat</a> | <a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+  </nav></header>
+  <main>
+    
+<h3>Weekly Sentiment Overview</h3>
+<ul>
+  <li>Positive: {{ pos }}</li>
+  <li>Neutral: {{ neu }}</li>
+  <li>Negative: {{ neg }}</li>
+</ul>
+<h3>Reported Issues</h3>
+<ul>{% for c in concerns %}<li>{{ c.concern }}</li>{% endfor %}</ul>
+
+  </main>
+</body>
+</html>

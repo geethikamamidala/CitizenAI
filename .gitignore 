@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Sensitive credentials
+.env
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
