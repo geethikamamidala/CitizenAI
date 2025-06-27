@@ -23,14 +23,10 @@ def home():
 def about():
     return render_template("about.html")
 
-
-
 @app.route('/chat', methods=['GET', 'POST'])
 def chat():
     response = None
     show_feedback = False
-    sentiment = None
-    latest = None
 
     if request.method == 'POST':
         if 'question' in request.form:
@@ -38,19 +34,15 @@ def chat():
             response = get_granite_response(question)
             chat_collection.insert_one({'question': question, 'response': response})
             show_feedback = True
-        elif 'feedback' in request.form:
-            feedback = request.form.get('feedback')
-            sentiment = analyze_sentiment(feedback)
-            sentiment_collection.insert_one({'feedback': feedback, 'sentiment': sentiment})
-        elif 'concern' in request.form:
-            concern = request.form.get('concern')
-            concern_collection.insert_one({'concern': concern})
 
-    chats = list(chat_collection.find({}, {'_id': 0}))
-    if chats:
-        latest = chats[-1]
+    return render_template("chat.html", latest=response, show_feedback=show_feedback)
 
-    return render_template("chat.html", latest=latest, sentiment=sentiment, show_feedback=show_feedback)
+@app.route('/feedback', methods=['POST'])
+def feedback():
+    feedback = request.form.get('feedback')
+    sentiment = analyze_sentiment(feedback)
+    sentiment_collection.insert_one({'feedback': feedback, 'sentiment': sentiment})
+    return redirect(url_for('dashboard'))
 
 @app.route('/dashboard')
 def dashboard():
