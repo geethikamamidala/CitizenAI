@@ -5,9 +5,7 @@
     and provides instant, AI-generated responses — with built-in sentiment analysis and a dynamic
     dashboard for real-time feedback insights.
 
-🧪 Live Demo
-        
-        🔗  https://citizenai-klmf.onrender.com
+🧪 Live Demo 🔗   https://citizenai-klmf.onrender.com
 
 🎯 Purpose
 
