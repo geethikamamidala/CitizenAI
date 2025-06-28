@@ -5,6 +5,10 @@
     and provides instant, AI-generated responses — with built-in sentiment analysis and a dynamic
     dashboard for real-time feedback insights.
 
+🧪 Live Demo
+        
+        🔗  https://citizenai-klmf.onrender.com
+
 🎯 Purpose
 
     CitizenAI bridges the communication gap between citizens and officials by providing:
@@ -38,9 +42,6 @@
     -Acting on real-time feedback
     -CitizenAI solves this with a chatbot that listens, responds, and learns — and a dashboard that turns conversations into insights.
 
-🧪 Live Demo
-        
-        🔗  https://citizenai-klmf.onrender.com
 
 🔮 Future Enhancements
 
